@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flipping-style.css">
+    <title>Real estate calculator</title>
+</head>
+<body>
+    <div class="header">
+        <a href="main-page.html"><img class="close" src="img/close.svg"></a>
+        <h1>Калькулятор флиппинга</h1>
+    </div>
+    <div class="inputData">
+        <div class="input-content">
+                <div class="realtyType">
+                <!-- <label for="propertyType">Выберите тип недвижимости:</label> -->
+                <select id="propertyType">
+                    <option value="apartment">Квартира</option>
+                    <option value="house">Дом</option>
+                </select>
+            </div>
+            <div class="currencyType">
+                <!-- <label for="currencyType">Выберите валюту:</label> -->
+                <select id="currencyType">
+                    <option>&dollar;</option>
+                    <option>&euro;</option>
+                    <option>&yen;</option>
+                    <option>&pound;</option>
+                    <option>&#8381;</option>
+                </select>
+            </div>
+            <div class="realtyPrice">
+            <input type="number" id="propertyPrice" placeholder="Стоимость покупки">
+            <input type="number" id="repairyPrice" placeholder="Стоимость ремонта">
+            </div>
+            <div class="taxInput">
+                <!-- <label for="taxInput">Налог:</label> -->
+            <input type="number" id="taxInput" placeholder="Налог"> %
+            </div>
+            <div class="realtorCommissionInput">
+                <!-- <label for="realtorCommissionInput">Коммисия риелтора:</label> -->
+            <input type="number" id="realtorCommissionInput" placeholder="Коммисия риелтора"> %
+            </div>
+            <button class="calculate" onclick="calculateIncome()">Рассчитать</button>
+        </div> 
+    </div>
+    <div class="result">
+        <h2>Результат:</h2>
+        <p>Грязная прибыль с продажи: <span id="grossProfit"></span></p>
+        <p>Налог: <span id="tax"></span></p>
+        <p>Комиссия риелтору: <span id="realtorCommission"></span></p>
+        <p>Чистый доход: <span id="netIncome"></span></p>
+    </div>
+    
+    <script src="flipping-calc.js"></script>
+</body>
+</html>
